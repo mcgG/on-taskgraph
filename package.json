@@ -30,7 +30,7 @@
     "lodash": "^3.10.1",
     "lru-cache": "^2.5.0",
     "minimist": "^1.2.0",
-    "node-uuid": "^1.4.2",
+    "uuid": "^3.1.0",
     "on-core": "git+https://github.com/mcgG/on-core.git",
     "on-tasks": "git+https://github.com/mcgG/on-tasks.git",
     "rx": "^2.3.22",
