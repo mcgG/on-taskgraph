@@ -301,4 +301,6 @@ in-target wget http://<%=server%>:<%=port%>/api/current/templates/debian-sources
 in-target wget http://<%=server%>:<%=port%>/api/current/templates/<%=rackhdCallbackScript%>?nodeId=<%=nodeId%> -O /etc/init.d/RackHDCallback; \
 in-target chmod +x /etc/init.d/RackHDCallback; \
 in-target update-rc.d RackHDCallback defaults; \
+# work around for issue https://bugs.launchpad.net/ubuntu/+source/netcfg/+bug/1361902
+cp /target/etc/network/interfaces /etc/network/interfaces; \
 in-target curl -X POST -H 'Content-Type:application/json' http://<%=server%>:<%=port%>/api/current/notification?nodeId=<%=nodeId%>
